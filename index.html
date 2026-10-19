@@ -304,35 +304,45 @@
       }
     }
     
-/* Header profile photo */
+/* Header logo and profile photo */
 .logo {
   display: inline-flex;
   align-items: center;
   gap: 12px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -1px;
   text-decoration: none;
 }
 
+.logo-name {
+  color: var(--text);
+}
+
+.logo-name span {
+  color: var(--accent);
+}
+
 .profile-photo {
+  display: block;
   width: 46px;
   height: 46px;
+  min-width: 46px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #216a74;
+  border: 2px solid var(--accent);
   flex-shrink: 0;
+  opacity: 1;
+  visibility: visible;
 }
 
-.logo-name {
-  color: inherit;
-}
-
-/* Mobile adjustments */
 @media (max-width: 600px) {
   .profile-photo {
     width: 38px;
     height: 38px;
+    min-width: 38px;
   }
 }
-
   </style>
 </head>
 
