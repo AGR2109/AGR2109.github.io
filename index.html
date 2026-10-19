@@ -303,23 +303,62 @@
         letter-spacing: -1.5px;
       }
     }
+    
+/* Header profile photo */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.profile-photo {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #216a74;
+  flex-shrink: 0;
+}
+
+.logo-name {
+  color: inherit;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .profile-photo {
+    width: 38px;
+    height: 38px;
+  }
+}
+
   </style>
 </head>
 
 <body>
-  <header>
-    <nav class="container">
-      <a class="logo" href="#home">Alonso<span>.</span></a>
+  
+<header>
+  <nav class="container">
+    <a class="logo" href="#home">
+      <img
+        src="./profile.jpg"
+        alt="Alonso Gutiérrez"
+        class="profile-photo"
+      />
+      <span class="logo-name">Alonso<span>.</span></span>
+    </a>
 
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
 
   <main>
     <section class="hero container" id="home">
@@ -433,33 +472,36 @@
         </p>
 
         <div class="grid">
-          <article class="card">
-            <div class="project-label">Full-stack web application</div>
-            <h3>Digital Menu Management Platform</h3>
-
-            <p>
-              A web platform developed to help restaurants manage
-              digital menus through QR codes, with functionality for
-              restaurant branches, user roles, orders, and subscriptions.
-            </p>
-
-            <ul>
-              <li>Backend development using Laravel.</li>
-              <li>Frontend development using React and TypeScript.</li>
-              <li>Database management with MySQL.</li>
-              <li>API integration and application features.</li>
-            </ul>
-
-            <div class="tags">
-              <span class="tag">Laravel</span>
-              <span class="tag">React</span>
-              <span class="tag">TypeScript</span>
-              <span class="tag">MySQL</span>
-            </div>
-
-            <!-- Add a public repository or demo URL when ready. -->
-          </article>
-
+        <article class="card">
+          <div class="project-label">Full-stack web application</div>
+          <h3>Digital Menu Management Platform</h3>
+        
+          <p>
+            A web platform designed to help restaurants manage
+            digital menus through QR codes. The system includes
+            restaurant branches, user roles, orders, and
+            subscription management.
+          </p>
+        
+          <ul>
+            <li>Frontend development using React and TypeScript, with a primary focus on user interface development.</li>
+            <li>Backend development and REST API integration using Laravel 11.</li>
+            <li>Database integration and management with MySQL.</li>
+            <li>Implementation of features for restaurant management and multi-tenant functionality.</li>
+          </ul>
+        
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Laravel 11</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">REST API</span>
+          </div>
+        
+          <p class="project-note">
+            Source code is private.
+          </p>
+        </article>
           <article class="card">
             <div class="project-label">More projects coming soon</div>
             <h3>Additional development projects</h3>
